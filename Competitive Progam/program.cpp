@@ -70,30 +70,14 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
     
 --------------------------------------------------------------------------------------------------------------------------------------------------*/
     
-    int Prime[10000];
-
-    void sieve() {
-        for (int i = 0; i <= 10000; i++) {
-            Prime[i] = 1;
-        }
-        for (int i = 2; i <= sqrt(100); i++) {
-            for (int j = i*i; j <= 10000; j+=i) {
-                if (Prime[j] == 1) {
-                    Prime[j] = 0;
-                }
-            }
-        }
-    }
+    
     
     void solve() {
         int n; cin >> n;
-        cout << n << endl;
-        if (Prime[n]) {
-            cout << "YES" << endl;
+        for (int i = 0; i <= 1; i++) {
+            cout << i << endl;
         }
-        else {
-            cout << "NO" << endl;
-        }
+        
     }
 
     int main() {       
@@ -103,7 +87,6 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
         #endif  
         ios_base::sync_with_stdio(false); 
         cin.tie(0); cout.tie(0);
-        sieve();
         int test = 1;
         while (test--) {
             solve();

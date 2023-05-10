@@ -84,8 +84,8 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
         double len() { return sqrt(x*x + y*y); }
     } a[MAXN];
 
-    bool used[MAXN];  // Đánh dấu điểm đã được đi qua.
-    int id[MAXN];  // Lưu chỉ số của các điểm trong kết quả tìm được.
+    bool used[MAXN];
+    int id[MAXN];
 
     void solve() {
         memset(used, false, sizeof used);

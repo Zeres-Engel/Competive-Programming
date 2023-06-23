@@ -70,20 +70,14 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
     
 --------------------------------------------------------------------------------------------------------------------------------------------------*/
     
-    
-    
+
     void solve() {
-        int n = 10, MAX = -MAXN, MIN = MAXN;
-        float tb = 0;
-        int a[n];
-        for (int i = 0; i < 10; i++) {
-            int x; cin >> x;
-            MAX = max(x, MAX);
-            MIN = min(x, MIN);
-            tb += x;
+        int n; cin >> n;
+        for (int i = 0; i <= n; i++) {
+            cout <<i << endl;
         }
-        cout << MIN << ' ' << MAX << ' ' << tb/10 << endl;
-    }
+        
+    } 
 
     int main() {       
         #ifndef ONLINE_JUDGE

@@ -1,4 +1,7 @@
+#include <algorithm>
 #include <bits/stdc++.h>
+#include <functional>
+#include <vector>
 using namespace std;
 using ll = long long;
 using db = double;
@@ -65,19 +68,43 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
     
     
     
-    
-    
-    
---------------------------------------------------------------------------------------------------------------------------------------------------*/
+    1   2   3    4
+
+    Mihaii:
+
+
+    1 1 1 2
+
+    2 * 4 = 8
+
+    1 + 1 + 2
     
 
+
+
+---------------------------------------------------------------------------------------------------------------------------------*/
+    
+    
+    
     void solve() {
         int n; cin >> n;
-        for (int i = 0; i <= n; i++) {
-            cout <<i << endl;
+        ll sum_odd = 0, sum_even = 0;
+        for (int i = 0 ; i < n; i++) {
+            int x; cin >> x;
+            if (x % 2 == 0) {
+                sum_even += x;
+            }            
+            else {
+                sum_odd += x;
+            }
         }
-        
-    } 
+        if (sum_even > sum_odd) {
+            cout << "YES\n";
+        }
+        else {
+            cout << "NO\n";
+        }
+    }
 
     int main() {       
         #ifndef ONLINE_JUDGE
@@ -86,7 +113,7 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
         #endif  
         ios_base::sync_with_stdio(false); 
         cin.tie(0); cout.tie(0);
-        int test = 1;
+        int test = 1; cin >> test;
         while (test--) {
             solve();
         }

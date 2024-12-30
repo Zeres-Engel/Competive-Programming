@@ -1,7 +1,0 @@
-ZHFTDFHF
-TFISHROV
-
-Bảng phương án:
-
-X[i] = Y[j] -> F[i][j] = F[i - 1][j] + 1
-X[i] != Y[j] -> F[i][j] = max(F[i - 1][j], F[i][j - 1]) 
